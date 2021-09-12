@@ -17,7 +17,7 @@ class TweetsController < ApplicationController
   end
 
   def edit
-    @tweet = Tweet.fnd(params[:id])
+    @tweet = Tweet.find(params[:id])
   end
 
   private
