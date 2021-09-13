@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_one, only: [:edit, :show]
+  before_action :set_tweet, only: [:edit, :show]
   def index
     @tweets = Tweet.all
   end
@@ -32,7 +32,7 @@ class TweetsController < ApplicationController
     params.require(:tweet).permit(:name, :image, :text)
   end
 
-  def set_one
+  def set_tweet
      @tweet = Tweet.find(params[:id])
   end
 end
